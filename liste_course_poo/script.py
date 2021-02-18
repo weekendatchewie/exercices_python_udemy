@@ -24,9 +24,16 @@ class Liste(list):
             return True
         return False
 
+    def afficher(self):
+        print(f"Ma liste de {self.nom} contient : ")
+        for element in self:
+            print(f"- {element}")
+
 
 if __name__ == "__main__":
     liste = Liste("courses")
     liste.ajouter("Pommes")
     liste.ajouter("Poires")
-    print(liste)
+    liste.afficher()
+    liste.enlever("Pommes")
+    liste.afficher()
