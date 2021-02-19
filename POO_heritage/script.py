@@ -16,7 +16,13 @@ class Utilisateur:
 
 class Junior(Utilisateur):
     def __init__(self, nom, prenom):
-        Utilisateur.__init__(self, nom, prenom)
+        super().__init__(nom, prenom)  # La fonction 'super' récupère les méthodes de la classe parente
+
+    # On utilise la surcharge pour modifier la méthode quand elle est appelée par la classe 'Junior'
+    def afficher_projets(self):
+        for projet in projets:
+            if not projet.startswith("pr_"):
+                print(projet)
 
 
 paul = Junior("Paul", "Durand")
