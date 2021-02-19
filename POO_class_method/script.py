@@ -7,6 +7,10 @@ class Voiture:
         self.vitesse = vitesse
         self.prix = prix
 
+    # '__str__' permet d'afficher ce que l'on souhaite lorsque l'on print notre instance
+    def __str__(self):
+        return f"La marque de la voiture est {self.marque}, d'une vitesse de {self.vitesse}km/s, et le prix est de {self.prix} ecus"
+
     @classmethod  # decorator, methode de classe
     def lamborghini(cls):  # 'cls' paramètre qui représente la classe
         return cls(marque="Lamborghini", vitesse=50, prix=200)
@@ -31,3 +35,4 @@ class Voiture:
 lambo = Voiture.lamborghini()
 porsche = Voiture.porsche()
 Voiture.afficher_voiture()
+print(lambo)
