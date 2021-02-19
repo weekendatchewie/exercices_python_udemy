@@ -7,7 +7,7 @@ class Voiture:
         self.vitesse = vitesse
         self.prix = prix
 
-    # '__str__' permet d'afficher ce que l'on souhaite lorsque l'on print notre instance
+    # '__str__' permet d'afficher ce que l'on souhaite lorsque l'on print notre instance, ou qu'on la convertie en str
     def __str__(self):
         return f"La marque de la voiture est {self.marque}, d'une vitesse de {self.vitesse}km/s, et le prix est de {self.prix} ecus"
 
